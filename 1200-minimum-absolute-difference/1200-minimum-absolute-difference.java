@@ -4,14 +4,14 @@ class Solution {
         Arrays.sort(arr);
         List<List<Integer>> result = new ArrayList();
         
-        int min_diff = Integer.MAX_VALUE;
+        int val = 2424;
         for(int i=1; i<arr.length; i++){
-            min_diff = Math.min(arr[i]-arr[i-1], min_diff);
+            val = Math.min(arr[i]-arr[i-1], val);
         }
         
         for(int i=1; i<arr.length; i++){
             
-            if(arr[i]-arr[i-1] == min_diff){
+            if(arr[i]-arr[i-1] == val){
                 List<Integer> pair = new ArrayList();
                 pair.add(arr[i-1]);
                 pair.add(arr[i]);
